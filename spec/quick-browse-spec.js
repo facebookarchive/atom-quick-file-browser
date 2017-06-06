@@ -1,5 +1,14 @@
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the license found in the LICENSE file in
+ * the root directory of this source tree.
+ *
+ * @flow
+ */
+
 'use babel';
-// @flow
 
 import invariant from 'assert';
 import path from 'path';
@@ -57,19 +66,20 @@ function waitsForElementToBeSelected(message: string, text: string): void {
 }
 
 describe('Quick file browser integration', () => {
+  let root: ?string;
+
   beforeEach(() => {
     jasmine.attachToDOM(atom.views.getView(atom.workspace));
     atom.packages.activatePackage('quick-file-browser');
-  });
 
-  it('can perform basic navigation and search', () => {
-    let root: ?string;
     waitsForPromise(async () => {
       root = path.join(__dirname, 'fixtures');
       atom.project.addPath(root);
       await atom.workspace.open(`${root}/dir1/start.txt`);
     });
+  });
 
+  it('can perform basic navigation and search', () => {
     // Activate
     runs(() => {
       const workspaceView = atom.views.getView(atom.workspace);
@@ -94,24 +104,22 @@ describe('Quick file browser integration', () => {
         'lists directory contents in correct order',
       );
       expect(notNull(queryEntrySelected()).innerText).toEqual(
-        'inner1/',
-        'first entry should be initially selected',
+        'start.txt',
+        'active file\'s entry should be initially selected',
       );
 
-      atom.commands.dispatch(notNull(document.activeElement), 'core:move-down');
-      // dispatchKeyboardEvent('j', document.activeElement);
-    });
-    waitsForElementToBeSelected('next element to be selected', 'inner2/');
-
-    runs(() => {
       atom.commands.dispatch(notNull(document.activeElement), 'core:move-up');
-      // dispatchKeyboardEvent('k', document.activeElement);
     });
-    waitsForElementToBeSelected('previous element to be selected', 'inner1/');
+    waitsForElementToBeSelected('previous element to be selected', 'f3.txt');
 
     runs(() => {
+      atom.commands.dispatch(notNull(document.activeElement), 'core:move-down');
+    });
+    waitsForElementToBeSelected('next element to be selected', 'start.txt');
+
+    runs(() => {
+      atom.commands.dispatch(notNull(document.activeElement), 'core:move-to-top');
       atom.commands.dispatch(notNull(document.activeElement), 'core:confirm');
-      // dispatchKeyboardEvent('enter', document.activeElement);
     });
     waitsForSettle(text => text === `${notNull(root)}/dir1/inner1`);
 
@@ -124,7 +132,6 @@ describe('Quick file browser integration', () => {
       );
 
       atom.commands.dispatch(notNull(document.activeElement), 'quick-file-browser:parent-dir');
-      // dispatchKeyboardEvent('-', document.activeElement);
     });
     waitsForSettle(text => text === `${notNull(root)}/dir1`);
 

@@ -1,9 +1,11 @@
 {
   "name": "quick-file-browser",
+  "author": "Yiding Jia",
   "repository": "https://github.com/yiding/atom-quick-file-browser",
   "main": "./lib/main.js",
   "version": "0.0.0",
   "description": "A keyboard driven file browser.",
+  "license": "BSD-3-Clause",
   "keywords": [
     "files",
     "navigation"
@@ -20,7 +22,8 @@
     "nuclide-commons": "^0.1.4",
     "nuclide-commons-atom": "^0.1.4",
     "nuclide-commons-ui": "^0.1.4",
-    "react": "^15.3.1",
+    "react": "15.3.1",
+    "react-dom": "15.3.1",
     "rxjs": "^5.3.1"
   },
   "devDependencies": {

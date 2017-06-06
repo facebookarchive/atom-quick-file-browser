@@ -37,3 +37,4 @@ When entering a search regex:
 
 * `Enter` - Finish and go to first matching entry.
 * `Esc` - Cancel.
+
