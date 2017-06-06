@@ -1,0 +1,34 @@
+atom-panel.modal.quick-file-browser {
+  // Set max height loosely based on font size. A dialog that's too long
+  // requires unnecessary eye movement.
+  // Otherwise, leave 50px spacing at top and bottom. 
+  height: calc(~'100vh - 100px');
+  max-height: 40em;
+}
+
+atom-panel.modal.quick-file-browser > div {
+  height: 100%;
+}
+
+.quick-file-browser-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.quick-file-browser-breadcrumb {
+  flex: 0 0 auto;
+}
+
+.quick-file-browser-entries {
+  overflow-y: scroll;
+  flex: 1 1 auto;
+}
+
+.quick-file-browser-search {
+  flex: 0 0 auto;
+}
+
+.quick-file-browser-search > atom-text-editor.mini.mini.mini {
+  margin: 0;
+}

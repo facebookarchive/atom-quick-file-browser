@@ -1,0 +1,13 @@
+{
+  "menu": [
+    {
+      "label": "View",
+      "submenu": [
+        {
+          "label": "Browse Directory of Active File",
+          "command": "quick-file-browser:browse-active-file-directory"
+        }
+      ]
+    }
+  ]
+}

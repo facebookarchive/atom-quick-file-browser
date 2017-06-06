@@ -1,0 +1,14 @@
+{
+  ".quick-file-browser .quick-file-browser-entries": {
+    "j": "core:move-down",
+    "k": "core:move-up",
+    "ctrl-f": "core:page-down",
+    "ctrl-b": "core:page-up",
+    "ctrl-d": "core:page-down",
+    "ctrl-u": "core:page-up",
+    "-": "quick-file-browser:parent-dir",
+    "/": "quick-file-browser:search",
+    "shift-N": "quick-file-browser:search-previous",
+    "n": "quick-file-browser:search-next"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "quick-file-browser",
+  "repository": "https://github.com/yiding/atom-quick-file-browser",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "A keyboard driven file browser.",
+  "keywords": [
+    "files",
+    "navigation"
+  ],
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "activationCommands": {
+    "atom-workspace": [
+      "quick-file-browser:browse-active-file-directory"
+    ]
+  },
+  "dependencies": {
+    "nuclide-commons": "^0.1.4",
+    "nuclide-commons-atom": "^0.1.4",
+    "nuclide-commons-ui": "^0.1.4",
+    "react": "^15.3.1",
+    "rxjs": "^5.3.1"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.47.0"
+  }
+}
