@@ -1,11 +1,11 @@
 {
   "name": "quick-file-browser",
-  "author": "Yiding Jia",
-  "repository": "https://github.com/yiding/atom-quick-file-browser",
+  "author": "Facebook Inc",
+  "repository": "https://github.com/facebookexperimental/atom-quick-file-browser",
   "main": "./lib/main.js",
   "version": "0.0.0",
   "description": "A keyboard driven file browser.",
-  "license": "BSD-3-Clause",
+  "license": "See LICENSE file at root of repo",
   "keywords": [
     "files",
     "navigation"
