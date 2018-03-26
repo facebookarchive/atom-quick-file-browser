@@ -3,7 +3,7 @@
   "author": "Facebook Inc",
   "repository": "https://github.com/facebookexperimental/atom-quick-file-browser",
   "main": "./lib/main.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A keyboard driven file browser.",
   "license": "See LICENSE file at root of repo",
   "keywords": [
