@@ -30,6 +30,7 @@ The default controls for the file browser dialog:
 * `Down/Up/PageDown/PageUp` - Alternate keys to move selection.
 * `Esc` - Close the browser.
 * `Enter` - Enter the selected directory or open the file.
+* `-` - Go up to parent directory.
 * `/` - Start entering search regex.
 * `n/N` - Search forwards/backwards.
 
