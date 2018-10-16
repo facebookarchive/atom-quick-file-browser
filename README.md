@@ -39,3 +39,5 @@ When entering a search regex:
 * `Enter` - Finish and go to first matching entry.
 * `Esc` - Cancel.
 
+## License
+atom-quick-file-browser is BSD3 licensed, as found in the LICENSE file.
