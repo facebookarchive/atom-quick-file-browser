@@ -40,4 +40,4 @@ When entering a search regex:
 * `Esc` - Cancel.
 
 ## License
-atom-quick-file-browser is BSD3 licensed, as found in the LICENSE file.
+atom-quick-file-browser is Nuclide licensed, as found in the LICENSE file.
